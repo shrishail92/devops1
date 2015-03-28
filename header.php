@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="images/icon.png">
+    <link rel="icon" href="images/logo1.png">
 
     <title>Fist | Header</title>
 
@@ -86,6 +86,7 @@
                   <ul class="dropdown-menu" role="menu">
                     <li><a href="guides_hemophilia.php">Guides / Manuals</a></li>
                     <li><a href="glossary_hemophilia.php">Glossary</a></li>
+                    <li><a href="videos_hemophilia.php">Videos</a></li> 
                   </ul>
                 </li>
 
@@ -115,8 +116,8 @@
                     <div class="pull-right hidden-xs">
                       <a href="#" class="" data-toggle="dropdown"><h5><i class="glyphicon glyphicon-user"></i>&nbsp;<i class="glyphicon glyphicon-collapse-down"></i></h5></a>
                       <ul class="dropdown-menu">
-                          <li><a href="#"><i class="glyphicon glyphicon-log-in"></i> Signin</a></li>
-                          <li><a href="#"><i class="glyphicon glyphicon-share-alt"></i> Signup</a></li>
+                          <li><a href="signin.php"><i class="glyphicon glyphicon-log-in"></i> Signin</a></li>
+                          <li><a href="signup.php"><i class="glyphicon glyphicon-share-alt"></i> Signup</a></li>
                       </ul>
                     </div>
                   </div>
