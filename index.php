@@ -6,15 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="images/icon.png">
+    <link rel="icon" href="images/logo1.png">
     <title>Fist | Cover Page</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="cover.css" rel="stylesheet">
-
+    <link href="css/cover.css" rel="stylesheet">
+    
+    <link href="css/popup.css" rel="stylesheet">
+    <script src="js/popup.js"></script>
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="js/ie-emulation-modes-warning.js"></script>
@@ -26,8 +28,26 @@
     <![endif]-->
   </head>
 
-  <body>
-
+  <body id="body" style="overflow:hidden;">
+  <div id="abc">
+    <!-- Popup Div Starts Here -->
+    <div id="popupContact">
+        <!-- Contact Us Form -->
+        <form action="#" id="form" method="post" name="form">
+            <img id="close" src="images/3.png" onclick ="div_hide()">
+            <h2>Contact Us</h2>
+            <hr>
+            <input id="name" name="name" placeholder="Name" type="text" required>
+            <input id="email" name="email" placeholder="Email" type="text" required>
+            <textarea id="msg" name="message" placeholder="Message" required></textarea>
+            <!--
+            javascript validation
+            <input type="submit" id="submit" value="Send" onclick="check_empty()">-->
+            <input type="submit" id="submit" value="Send">
+        </form>
+    </div>
+    <!-- Popup Div Ends Here -->
+  </div>
     <div class="site-wrapper">
 
       <div class="site-wrapper-inner">
@@ -40,7 +60,7 @@
               <nav>
                 <ul class="nav masthead-nav">
                   <li class="active"><a href="#">Features</a></li>
-                  <li><a href="#">Contact</a></li>
+                  <li><a href="#" onclick="div_show()">Contact</a></li>
                 </ul>
               </nav>
             </div>
