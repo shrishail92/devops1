@@ -14,12 +14,12 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <!--[if lt IE 9]><script src="js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="js/ie-emulation-modes-warning.js"></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
     <![endif]-->
     <!-- Custom styles for this template -->
     <link href="carousel.css" rel="stylesheet">
@@ -38,7 +38,7 @@
                   <img src="images/Helping_Hands_cropped.jpg" class="logo" height="55px" width="55px" alt="logo"/>
                 </a>
               </li>
-              <li class="navbar-brand"><h1><FONT FACE="algerian">Future India Social Trust</FONT></h1></li>
+              <li class="navbar-brand"><h1><span FACE="algerian">Future India Social Trust</span></h1></li>
               <li>
               </li>
             </ul>
@@ -106,21 +106,19 @@
                   </ul>
                 </li>
 
-                <li><a href="#about">About us</a></li>
-                <li><a href="#contact"><i class="glyphicon glyphicon-phone-alt"></i>&nbsp;Contact us</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#"><i class="glyphicon glyphicon-phone-alt"></i>&nbsp;Contact us</a></li>
 
               </ul>
 
               <ul class="nav navbar-nav navbar-right">
-                <div class="">
-                    <div class="pull-right hidden-xs">
-                      <a href="#" class="" data-toggle="dropdown"><h5><i class="glyphicon glyphicon-user"></i>&nbsp;<i class="glyphicon glyphicon-collapse-down"></i></h5></a>
-                      <ul class="dropdown-menu">
-                          <li><a href="signin.php"><i class="glyphicon glyphicon-log-in"></i> Signin</a></li>
-                          <li><a href="signup.php"><i class="glyphicon glyphicon-share-alt"></i> Signup</a></li>
-                      </ul>
-                    </div>
-                  </div>
+                <div class="pull-right hidden-xs">
+                  <a href="#" class="" data-toggle="dropdown"><h5><i class="glyphicon glyphicon-user"></i>&nbsp;<i class="glyphicon glyphicon-collapse-down"></i></h5></a>
+                  <ul class="dropdown-menu">
+                      <li><a href="signin.php"><i class="glyphicon glyphicon-log-in"></i> Signin</a></li>
+                      <li><a href="signup.php"><i class="glyphicon glyphicon-share-alt"></i> Signup</a></li>
+                  </ul>
+                </div>
               </ul>
 
             </div>

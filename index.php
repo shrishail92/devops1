@@ -37,8 +37,8 @@
             <img id="close" src="images/3.png" onclick ="div_hide()">
             <h2>Contact Us</h2>
             <hr>
-            <input id="name" name="name" placeholder="Name" type="text" required/>
-            <input id="email" name="email" placeholder="Email" type="text" required/>
+            <input id="name" name="name" placeholder="Name" type="text" required>
+            <input id="email" name="email" placeholder="Email" type="text" required>
             <textarea id="msg" name="message" placeholder="Message" required></textarea>
             <!--
             javascript validation

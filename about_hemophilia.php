@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="icon.png">
 
     <title>Fist | About hemophilia</title>
 
@@ -14,16 +13,16 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="offcanvas.css" rel="stylesheet">
+    <link href="css/offcanvas.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <!--[if lt IE 9]><script src="js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="js/ie-emulation-modes-warning.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
     <![endif]-->
   </head>
 
@@ -90,27 +89,25 @@
           <div class="row">
             <div class="col-xs-6 col-lg-12">
               <h2>Types</h2>
-              <p class="text-justify">
-                <span>
+              <div class="text-justify">
                   There are several different types of hemophilia. The following two are the most common:
                   <ul>
                     <li>
                       Hemophilia A (Classic Hemophilia)<br/>
                       This type is caused by a lack or decrease of clotting factor VIII.
-                    </li><br/>
+                    </li>
                     <li>
                       Hemophilia B (Christmas Disease)<br/>
                       This type is caused by a lack or decrease of clotting factor IX.
                     </li>
-                </span></p>
+              </div>
             </div><!--/.col-xs-6.col-lg-4--> 
           </div><!--/row-->
 
           <div class="row">
             <div class="col-xs-6 col-lg-12">
               <h2>Signs and Symptoms</h2>
-              <p class="text-justify">
-                <span>
+              <div class="text-justify">
                   Common signs of hemophilia include:
                   <ul class="text-justify">
                     <li>
@@ -141,15 +138,14 @@
                       Frequent and hard-to-stop nosebleeds.
                     </li>
                   </ul>
-                </span>
-              </p>
+              </div>
             </div><!--/.col-xs-6.col-lg-4--> 
           </div><!--/row-->
 
           <div class="row">
             <div class="col-xs-6 col-lg-12">
               <h2>Diagnosis</h2>
-              <p class="text-justify">
+              <div class="text-justify">
                 <span class="para">
                   Many people who have or have had family members with hemophilia will ask that their baby boys get 
                   tested soon after birth. About one-third of babies who are diagnosed with hemophilia have a new 
@@ -158,14 +154,15 @@
                   certain blood tests to show if the blood is clotting properly. If it does not, then they would do 
                   clotting factor tests, also called factor assays, to diagnose the cause of the bleeding disorder. 
                   These blood tests would show the type of hemophilia and the severity.
-                </span></p>
+                </span>
+              </div>
             </div><!--/.col-xs-6.col-lg-4--> 
           </div><!--/row-->
 
           <div class="row">
             <div class="col-xs-6 col-lg-12">
               <h2>Treatment</h2>
-              <p class="text-justify">
+              <div class="text-justify">
                 <span class="para">
                  The best way to treat hemophilia is to replace the missing blood clotting factor so that the blood 
                  can clot properly. This is done by infusing (administering through a vein) commercially prepared 
@@ -186,14 +183,14 @@
                   Center (HTC). An HTC not only provides care to address all issues related to the disorder, but also 
                   provides health education that helps people with hemophilia stay healthy.
                 </span>
-                </p>
+              </div>
             </div><!--/.col-xs-6.col-lg-4--> 
           </div><!--/row-->
 
           <div class="row">
             <div class="col-xs-6 col-lg-12">
               <h2>Prevention</h2>
-              <p class="text-justify">
+              <div class="text-justify">
                 <span class="para">
                  If there is a family history of haemophilia, you can test the infant at birth or can even before birth, 
                  in the first three months of pregnancy (with Chorionic villous sampling or amniocentesis).
@@ -222,7 +219,7 @@
                       Low level of clotting factors VIII or IX
                     </li>
                   </ul>
-                </p>
+                </div>
             </div><!--/.col-xs-6.col-lg-4--> 
           </div><!--/row-->
 
@@ -248,7 +245,7 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
 
-    <script src="offcanvas.js"></script>
+    <script src="js/offcanvas.js"></script>
     <?php include 'footer.php'; ?>
   </body>
 </html>

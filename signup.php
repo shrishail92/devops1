@@ -11,7 +11,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="signin.css">
+    <link rel="stylesheet" type="text/css" href="css/signin.css">
 
     <!-- Custom styles for this template -->
 	<style type="text/css">
@@ -125,7 +125,7 @@
 						            if(!count($count))
 						            {
 						        	   	//Save the New user
-						             	$user_data=array('email'=>$email,'password'=>md5($password));             
+						             	$user_data=array('email'=>$email,'password'=>md5($pass));             
 						                $collection->save($user_data);
 						             	echo "<div class=\"alert alert-success\" role=\"alert\">You are successfully registered. Click Sign in to enter.</div>";
 						            }

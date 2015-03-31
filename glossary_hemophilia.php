@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="icon.png">
 
     <title>Fist | Glossary of hemophilia</title>
 
@@ -14,16 +13,16 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="offcanvas.css" rel="stylesheet">
+    <link href="css/offcanvas.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <!--[if lt IE 9]><script src="js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="js/ie-emulation-modes-warning.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
     <![endif]-->
   </head>
 
@@ -87,8 +86,7 @@
                 <li><span class="text-primary">DDAVP</span> - desmopressin acetate, a synthetic hormone used to treat some patients with mild hemophilia or von Willebrand disease.</li>
                 <li><span class="text-primary">deep vein thrombosis (DVT)</span> - a blood clot in a vein deep in the body, usually in the lower leg or thigh.</li>
                 <li><span class="text-primary">desmopressin acetate (also DDAVP or Stimate®)</span> - a synthetic hormone used to treat some patients with mild hemophilia or von Willebrand disease.</li>
-                <li><span class="text-primary">DNA (deoxyribonucleic acid)</span> - the molecular basis of heredity. The order of the four bases that compose DNA</span> - adenine, cytosine, guanine and thymine</span> - provides information on cell activity.</li>
-                <span class="text-primary">end-stage liver disease</span> - irreversible damage to the liver that can end in liver failure. It is caused by chronic cirrhosis.</li>
+                <li><span class="text-primary">DNA (deoxyribonucleic acid)</span> - the molecular basis of heredity. The order of the four bases that compose DNA</span> - adenine, cytosine, guanine and thymine</span> - provides information on cell activity.</li><li><span class="text-primary">end-stage liver disease</span> - irreversible damage to the liver that can end in liver failure. It is caused by chronic cirrhosis.</li>
                 <li><span class="text-primary">factor assay</span> - a lab test that determines the level of circulating factor in the body. The results are reported as a percentage of normal levels.</li>
                 <li><span class="text-primary">factor product</span> - treatment that is infused to replace the body’s missing clotting proteins. It is made from plasma or recombinant products.</li>
                 <li><span class="text-primary">factor deficiencies</span> - bleeding disorders identified by the missing clotting factor. They include factors I, II, V, VII, VIII, IX, X, XI, XII and XIII.</li>
@@ -181,7 +179,7 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
 
-    <script src="offcanvas.js"></script>
+    <script src="css/offcanvas.js"></script>
     <?php include 'footer.php'; ?>
   </body>
 </html>
