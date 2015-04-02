@@ -14,7 +14,7 @@
 
     <!-- Custom styles for this template -->
     <link href="css/cover.css" rel="stylesheet">
-    
+
     <link href="css/popup.css" rel="stylesheet">
     <script src="js/popup.js"></script>
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
@@ -27,26 +27,28 @@
       <script src="js/respond.min.js"></script>
     <![endif]-->
   </head>
-
-  <body id="body" style="overflow:hidden;">
-  <div id="abc">
-    <!-- Popup Div Starts Here -->
-    <div id="popupContact">
-        <!-- Contact Us Form -->
-        <form action="#" id="form" method="post" name="form">
-            <img id="close" src="images/3.png" onclick ="div_hide()">
-            <h2>Contact Us</h2>
-            <hr>
-            <input id="name" name="name" placeholder="Name" type="text" required>
-            <input id="email" name="email" placeholder="Email" type="text" required>
-            <textarea id="msg" name="message" placeholder="Message" required></textarea>
-            <!--
-            javascript validation
-            <input type="submit" id="submit" value="Send" onclick="check_empty()">-->
-            <input type="submit" id="submit" value="Send">
-        </form>
-    </div>
-    <!-- Popup Div Ends Here -->
+  <body>
+  <div id="body" style="overflow:hidden;">
+      <div id="abc">
+          <!-- Popup Div Starts Here -->
+          <div id="popupContact">
+              <!-- Contact Us Form -->
+                <div id="view">
+                  <img id="close" src="images/3.png" onclick ="div_hide()">
+                  <h2>Services we provide:</h2>
+                  <hr>
+                  <ul>
+                      <li>Providing medicines in subsidised price</li>
+                      <li>Helping patients by volunteers</li>
+                      <li>Conducting blood campaigns</li>
+                      <li>Providing education to patients & people</li>
+                      <li>Creating awareness among patients & people</li>
+                      <li>Arranging meetup of patients with doctors</li>
+                  </ul>
+                </div>
+          </div>
+          <!-- Popup Div Ends Here -->
+      </div>
   </div>
     <div class="site-wrapper">
 
@@ -59,8 +61,7 @@
               <h3 class="masthead-brand">Welcome to F.I.S.T</h3>
               <nav>
                 <ul class="nav masthead-nav">
-                  <li class="active"><a href="#">Features</a></li>
-                  <li><a href="#" onclick="div_show()">Contact</a></li>
+                  <li class="active"><a href="#" onclick="div_show()">Services</a></li>
                 </ul>
               </nav>
             </div>
