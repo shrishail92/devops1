@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
+    <meta name="description" content="Cover Page">
     <meta name="author" content="shrishail sh">
     <link rel="icon" href="images/logo1.png">
     <title>Fist | Cover Page</title>
