@@ -1,22 +1,22 @@
 /**
  * Created by king on 31/3/15.
  */
-// Validating Empty Field
-function check_empty() 
+
+function progress()
 {
-	if (document.getElementById('name').value == "" || document.getElementById('email').value == "" || document.getElementById('msg').value == "") 
-	{
-		alert("Fill All Fields !");
-	} 
-	else 
-	{
-		document.getElementById('form').submit();
-		alert("Form Submitted Successfully...");
-	}
+    if (document.getElementById('name').value != "" || document.getElementById('email').value != "" || document.getElementById('msg').value != "")
+    {
+        var id='progress';
+        var myClassName=" progress"; //must keep a space before class name
+        var d;
+        d=document.getElementById(id);
+        d.className=d.className.replace(myClassName,""); // first remove the class name if that already exists
+        d.className = d.className + myClassName; // adding new class name
+    }
 }
 
 //Function To Display Popup
-function div_show() 
+function div_show()
 {
 	document.getElementById('abc').style.display = "block";
 }
