@@ -13,6 +13,13 @@
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/popupcontact.css" rel="stylesheet">
+
+      <script src="js/jquery-2.1.3.min.js"></script>
+
+      <!-- This is what you need -->
+      <script src="sweetalert-master/lib/sweet-alert.min.js"></script>
+      <link rel="stylesheet" href="sweetalert-master/lib/sweet-alert.css">
+
     <script src="js/popup.js"></script>
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
@@ -138,7 +145,7 @@
                 </li>
 
                 <li><a href="#">About us</a></li>
-                <li><a href="#" onclick="div_show()"><i class="glyphicon glyphicon-phone-alt"></i>&nbsp;Contact us</a></li>
+                <li><a href="#" onclick="div_show()"><i class="glyphicon glyphicon-envelope"></i>&nbsp;Contact us</a></li>
 
               </ul>
 
@@ -193,14 +200,14 @@
           if($result==1)
           {?>
               <script type='text/javascript'>
-                  alert('success');
+                  swal("Good job!", "Thank you for contacting us. We will reach you very soon.", "success");
               </script>
           <?php
           }
           else
           {?>
               <script type='text/javascript'>
-                  alert('failed');
+                  swal("Oops...!", "Something went wrong! Try again after some time.", "error");
               </script>
           <?php
           }
