@@ -4,7 +4,7 @@
 
 function progress()
 {
-    if (document.getElementById('name').value != "" || document.getElementById('email').value != "" || document.getElementById('msg').value != "")
+    if (document.getElementById('name').value != "" && document.getElementById('email').value != "" && document.getElementById('msg').value != "")
     {
         var id='progress';
         var myClassName=" progress"; //must keep a space before class name
