@@ -88,7 +88,7 @@ width:100%;
 text-align:center;
 display:block;
 background-color:#5BC0DE;
-color:#fff;
+color: rgb(255, 255, 255);
 border:1px solid #0BC0DE;
 padding:10px 0;
 font-size:20px;
