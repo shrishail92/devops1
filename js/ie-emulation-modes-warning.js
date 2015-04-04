@@ -8,6 +8,11 @@
  * details, see http://creativecommons.org/licenses/by/3.0/.
  */
 // Intended to prevent false-positive bug reports about Bootstrap not working properly in old versions of IE due to folks testing using IE's unreliable emulation modes.
+
+
+
+//function for validation in treatment center search
+
 function enablecity(){
   var state = $("#state option:selected").val();
   if(state=="")
@@ -63,15 +68,13 @@ function enablecity(){
     for (index = 0; index < cities.length; index++) {
         var val=cities[index];
         options[options.length] = new Option(val, val);
-    } 
+    }
   }
 }
 
 $(document).ready(function(){
   $('.scrollToTop').fadeOut();
-  $('#city').attr("disabled", "disabled");
-
-  //$("#textbox1").removeAttr("disabled"); 
+  //$("#textbox1").removeAttr("disabled");
     //Check to see if the window is top if not then display button
   $(window).scroll(function(){
     if ($(this).scrollTop() > 100) {
@@ -80,14 +83,91 @@ $(document).ready(function(){
       $('.scrollToTop').fadeOut();
     }
   });
-  
+
   //Click event to scroll to top
   $('.scrollToTop').click(function(){
     $('html, body').animate({scrollTop : 0},800);
     return false;
   });
-  
+
 });
+
+
+
+//function for validation in signup page
+
+function displaydate(){
+    var month = $("#month option:selected").val();
+    var year = $("#year option:selected").val();
+    if(month=="" || year=="")
+    {
+        $('#day').attr("disabled", "disabled");
+    }
+    else{
+
+        $("#day").removeAttr("disabled");
+        alert(month);
+
+        var days;
+        switch (month) {
+            case "Jan":
+                days=31;
+                break;
+            case "Feb":
+                days=28;
+                if(year%4==0)
+                {
+                    days=29;
+                }
+                break;
+            case "March":
+                days=31;
+                break;
+            case "April":
+                days=30;
+                break;
+            case "May":
+                days=31;
+                break;
+            case "June":
+                days=30;
+                break;
+            case "July":
+                days=31;
+                break;
+            case "Aug":
+                days=31;
+                break;
+            case "Sep":
+                days=30;
+                break;
+            case "Oct":
+                days=31;
+                break;
+            case "Nov":
+                days=30;
+                break;
+            case "Dec":
+                days=31;
+                break;
+        }
+
+        var select = $('#day');
+        if(select.prop) {
+            var options = select.prop('options');
+        }
+        else {
+            var options = select.attr('options');
+        }
+        $('option', select).remove();
+        var index;
+        for (index = 1; index <= days; index++) {
+            options[options.length] = new Option(index, index);
+        }
+    }
+}
+
+
 
 (function () {
   'use strict';
