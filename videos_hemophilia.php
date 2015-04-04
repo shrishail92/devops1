@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
+    <meta name="description" content="Videos for hemophilia">
     <meta name="author" content="shrishail sh">
 
     <title>Fist | Videos for hemophilia</title>
@@ -95,7 +95,7 @@
                 <video width="370" height="240" controls class="featurette-image img-responsive img-thumbnail">
                   <source src="hemo_videos/A Moms Promise to Her Son with Hemophilia.mp4" type="video/mp4">
                   Your browser does not support the video tag.
-                </video> 
+                </video>
                 <div class="caption">
                   <p>A Moms Promise to Her Son with Hemophilia</p>
                 </div>
