@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
+    <meta name="description" content="sign up page">
     <meta name="author" content="shrishail sh">
 
     <title>Fist | Signup</title>
@@ -31,7 +31,7 @@
 
 		input[type="text"],input[type="password"],input[type="email"]
 		{
-			height: 42px;
+			height: 35px;
 		}
 	</style>
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
@@ -51,7 +51,7 @@
 	        <div class="col-md-6 col-sm-offset-3">
 		  		<div>
 				  	<?php 
-						if($_POST['submit'])
+						if(isset($_POST['submit']))
 						{
 							//getting post variable
                             $fname=strip_tags($_POST['first_name']);
@@ -63,27 +63,27 @@
 							$error = array();
                             if(empty($fname))
                             {
-                                $error[] = "<div class=\"alert alert-warning\" role=\"alert\">Please enter first name.</div>";
+                                $error[] = '<div class="alert alert-warning" role="alert">Please enter first name.</div>';
                             }
                             if(empty($lname))
                             {
-                                $error[] = "<div class=\"alert alert-warning\" role=\"alert\">Please enter last name.</div>";
+                                $error[] = '<div class="alert alert-warning" role="alert">Please enter last name.</div>';
                             }
 							if(empty($email) or !filter_var($email,FILTER_SANITIZE_EMAIL))
 							{
-							  $error[] = "<div class=\"alert alert-warning\" role=\"alert\">Email id is empty or invalid !</div>";
+							  $error[] = '<div class="alert alert-warning" role="alert">Email id is empty or invalid !</div>';
 							}
 							if(empty($pass))
 							{
-							  $error[] = "<div class=\"alert alert-warning\" role=\"alert\">Please enter password.</div>";
+							  $error[] = '<div class="alert alert-warning" role="alert">Please enter password.</div>';
 							}
 					        if(empty($confirm_pass))
 					        {
-							  $error[] = "<div class=\"alert alert-warning\" role=\"alert\">Please enter Confirm password.</div>";
+							  $error[] = '<div class="alert alert-warning" role="alert">Please enter Confirm password.</div>';
 							}
 							if($pass != $confirm_pass)
 							{
-							   $error[] = "<div class=\"alert alert-warning\" role=\"alert\">Password and Confirm password are not matching.</div>";
+							   $error[] = '<div class="alert alert-warning" role="alert">Password and Confirm password are not matching.</div>';
 							}
 					 
 							if(count($error)==0)
@@ -127,11 +127,11 @@
 						        	   	//Save the New user
 						             	$user_data=array('email'=>$email,'password'=>md5($pass));             
 						                $collection->save($user_data);
-						             	echo "<div class=\"alert alert-success\" role=\"alert\">You are successfully registered. Click Sign in to enter.</div>";
+						             	echo '<div class="alert alert-success" role="alert">You are successfully registered. Click Sign in to enter.</div>';
 						            }
 						            else
 						            {
-						             	echo "<div class=\"alert alert-danger\" role=\"alert\">Email is already existed. Please register with another Email id !";
+						             	echo '<div class="alert alert-danger" role="alert">Email is already existed. Please register with another Email id !';
 						            }
 					 
 					            }
@@ -151,13 +151,20 @@
 						}
 					?>
 				</div>
-	        	<h1 class="text-center login-title">Mark your footprint in FIST</h1>
-	        	<div class="account-wall">
-	        		<img class="profile-img" src="images/signin.png" alt="">
-		 			<div class="panel-body">
-			    		<form role="form" action="signup.php" method="post">
-
-			    			<div class="row">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <strong> Mark your footprint in Fist</strong>
+                    </div>
+                    <div class="panel-body">
+                        <form role="form" action="signin.php" method="POST">
+                            <fieldset>
+                                <div class="row">
+                                    <div class="center-block">
+                                        <img class="profile-img"
+                                             src="images/signin.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="row">
 			    				<div class="col-md-6">
 			    					<div class="form-group">
 			                			<input type="text" name="first_name" id="first_name" class="form-control" placeholder="First Name" required>
@@ -186,6 +193,61 @@
 			    					</div>
 			    				</div>
 			    			</div>
+
+                            <label for="birthdate">
+                                Birth Date</label>
+                            <div class="row">
+
+                                <div class="col-xs-4 col-md-4">
+                                    <label for="year"></label>
+                                    <select name="year" id="year" class="form-control">
+                                        <option value="">Year</option>
+                                        <?php
+                                        $year=date("Y");
+                                        for($i = $year, $j=0 ; $j<100 ; $j++ , $year--)
+                                        {
+                                            echo '<option value="'.$year.'">'.$year.'</option>';
+                                        }
+                                        ?>
+                                    </select>
+                                </div>
+
+                                <?php
+                                    $months=array('Jan','Feb','March','April','May','June','July','Aug','Sep','Oct','Nov','Dec');
+                                    $monthscount=count($months);
+                                ?>
+                                <div class="col-xs-4 col-md-4">
+                                    <label for="month"></label>
+                                    <select name="month" id="month" class="form-control" onchange="displaydate()">
+                                        <option value="">Month</option>
+                                        <?php
+                                        for($i = 0; $i < $monthscount; $i++)
+                                        {
+                                            echo '<option value="'.$months[$i].'">'.$months[$i].'</option>';
+                                        }
+                                        ?>
+                                    </select>
+                                </div>
+
+                                <div class="col-xs-4 col-md-4">
+                                    <label for="day"></label>
+                                    <select name="day" id="day" class="form-control" disabled>
+                                        <option value="">Day</option>
+
+                                    </select>
+                                </div>
+                            </div>
+                            <br/>
+
+                            <label class="radio-inline">
+                                <input type="radio" name="sex" id="inlineCheckbox1" value="male" />
+                                Male
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="sex" id="inlineCheckbox2" value="female" />
+                                Female
+                            </label>
+
 			    			<div class="row">
 			    				<div class="col-md-6">
 			    					<div class="form-group">
