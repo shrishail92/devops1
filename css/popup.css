@@ -1,116 +1,59 @@
 
-@import "http://fonts.googleapis.com/css?family=Raleway";
+@import 'http://fonts.googleapis.com/css?family=Raleway';
 /*----------------------------------------------
 CSS settings for HTML div Exact Center
 ------------------------------------------------*/
 #abc {
-width:100%;
-height:100%;
-opacity:.95;
-display:none;
-position:fixed;
-background-color:#313131;
-overflow:auto;
-z-index: 999;
+    width:100%;
+    height:100%;
+    opacity:.95;
+    display:none;
+    position:fixed;
+    background-color:#313131;
+    overflow:auto;
+    z-index: 999;
 }
 img#close {
-position:absolute;
-right:-14px;
-top:-14px;
-cursor:pointer
+    position:absolute;
+    right:-14px;
+    top:-14px;
+    cursor:pointer
 }
 div#popupContact {
-position:absolute;
-left:50%;
-top:13%;
-margin-left: -175px;
-width: auto;
-font-family:'Raleway',sans-serif
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin-left: -215px;
+    margin-top: -160px;
+    font-family:'Raleway',sans-serif;
+    width: auto;
+    max-width:430px;
 }
-form {
-max-width:350px;
-padding:10px 50px;
-border:2px solid gray;
-border-radius:10px;
-font-family:raleway;
-background-color:#fff
+div#view {
+    padding:10px 50px;
+    border:2px solid gray;
+    border-radius:10px;
+    font-family:raleway;
+    background-color:#fff
 }
 p #m{
-margin-top:30px
+    margin-top:30px
 }
-h2 {
-background-color:#FEFFED;
-padding:20px 35px;
-margin:-10px -50px;
-text-align:center;
-border-radius:10px 10px 0 0;
-color: #666;
+div#popupContact h2 {
+    background-color:#FEFFED;
+    padding:20px 35px;
+    margin:-10px -50px;
+    text-align:center;
+    border-radius:10px 10px 0 0;
+    color: #39C;
 }
-hr {
-margin:10px -50px;
-border:0;
-border-top:1px solid #ccc
+div#popupContact li{
+    margin: 10px 0;
+    color: #000000;
+    text-align: left;
 }
-input[type=text] {
-width:100%;
-padding:10px;
-margin-top:30px;
-border:1px solid #ccc;
-padding-left:40px;
-font-size:16px;
-font-family:raleway;
-color: #333;
-}
-#name {
-background-image:url(../images/name.jpg);
-background-repeat:no-repeat;
-background-position:5px 7px
-}
-#email {
-background-image:url(../images/email.png);
-background-repeat:no-repeat;
-background-position:5px 7px
-}
-textarea {
-background-image:url(../images/msg.png);
-background-repeat:no-repeat;
-background-position:5px 7px;
-width:100%;
-height:95px;
-padding:10px;
-resize:none;
-margin-top:30px;
-border:1px solid #ccc;
-padding-left:40px;
-font-size:16px;
-font-family:raleway;
-margin-bottom:30px;
-color: #333;
-}
-#submit {
-text-decoration:none;
-width:100%;
-text-align:center;
-display:block;
-background-color:#333;
-color:#fff;
-border:1px solid #eee;
-padding:10px 0;
-font-size:20px;
-cursor:pointer;
-border-radius:5px
-}
-span {
-color:red;
-font-weight:700
-}
-button {
-width:10%;
-height:45px;
-border-radius:3px;
-background-color:#cd853f;
-color:#fff;
-font-family:'Raleway',sans-serif;
-font-size:18px;
-cursor:pointer
+div#popupContact hr {
+    margin:10px -50px;
+    border:0;
+    border-top:1px solid #ccc
 }
