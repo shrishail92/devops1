@@ -4,14 +4,16 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="navigation">
+    <meta name="author" content="shrishail sh">
     <link rel="icon" href="images/logo1.png">
 
     <title>Fist | Header</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/popupcontact.css" rel="stylesheet">
+    <script src="js/popup.js"></script>
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -27,6 +29,35 @@
 <!-- NAVBAR
 ================================================== -->
   <body>
+
+        <!-- popup contact form -->
+        <div style="overflow:hidden;">
+            <div id="abc">
+                <!-- Popup Div Starts Here -->
+                <div id="popupContact">
+                    <!-- Contact Us Form -->
+                    <form action=<?php echo $_SERVER['PHP_SELF'];?> id="form" method="post" name="form">
+                        <img id="close" src="images/3.png" onclick ="div_hide()">
+                        <h2>Contact Us</h2>
+                        <hr>
+                        <input id="name" name="name" placeholder="Name" type="text" required>
+                        <input id="email" name="email" placeholder="Email" type="text" required>
+                        <input id="subject" name="subject" placeholder="Subject" type="text">
+                        <textarea id="msg" name="message" placeholder="Message" required></textarea>
+                        <input type="submit" value="send" name="contactus" id="submitbutton" onclick="progress()">
+                        <div id="progress">
+                            <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                                <span class="sr-only">99% Complete</span>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+                <!-- Popup Div Ends Here -->
+            </div>
+        </div>
+
+        <!-- popup contact form ends here -->
 
     <div class="navbar-wrapper">
 
@@ -107,7 +138,7 @@
                 </li>
 
                 <li><a href="#">About us</a></li>
-                <li><a href="#"><i class="glyphicon glyphicon-phone-alt"></i>&nbsp;Contact us</a></li>
+                <li><a href="#" onclick="div_show()"><i class="glyphicon glyphicon-phone-alt"></i>&nbsp;Contact us</a></li>
 
               </ul>
 
@@ -135,4 +166,45 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
   </body>
+
+  <?php
+      if(isset($_POST['contactus']))
+      {
+          require_once 'swiftmailer-5.x/lib/swift_required.php';
+          ini_set('max_execution_time', 600);
+          $sub="contact fist";
+          $name=$_POST['name'];
+          $sender=$_POST['email'];
+          $msg=$_POST['message'];
+          $sub=$_POST['subject'];
+
+          $transport = Swift_SmtpTransport::newInstance('smtp.gmail.com', 465, "ssl")
+              ->setUsername('fist4hemophilia@gmail.com')
+              ->setPassword('fist4hemophilia92');
+
+          $mailer = Swift_Mailer::newInstance($transport);
+
+          $message = Swift_Message::newInstance($sub)
+              ->setFrom(array($sender => $sender))
+              ->setTo(array('fist4hemophilia@writeme.com'))
+              ->setBody($msg);
+
+          $result = $mailer->send($message);
+          if($result==1)
+          {?>
+              <script type='text/javascript'>
+                  alert('success');
+              </script>
+          <?php
+          }
+          else
+          {?>
+              <script type='text/javascript'>
+                  alert('failed');
+              </script>
+          <?php
+          }
+      }
+  ?>
+
 </html>
