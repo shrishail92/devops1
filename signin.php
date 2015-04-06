@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
+    <meta name="description" content="sign in page">
     <meta name="author" content="shrishail sh">
 
     <title>Fist | Signin</title>
@@ -27,12 +27,12 @@
   </head>
 
   <body>
-  	<div class="container marketing" id="container">
+  	<div class="container marketing" id="container" style="margin-top:40px">
   		<div class="row">
   			<div class="col-sm-6 col-md-4 col-md-offset-4">
           <div>
-            <?php 
-              if($_POST['submit'])
+          <?php
+              if(isset($_POST['signin']))
               {
                 //getting post variable
                 $email=strip_tags($_POST['email']);
@@ -96,24 +96,59 @@
                         }
                 }
               }
-            ?>
+          ?>
+          <div class="panel panel-default">
+              <div class="panel-heading">
+                  <strong> Sign in to continue</strong>
+              </div>
+              <div class="panel-body">
+                  <form role="form" action="signin.php" method="POST">
+                      <fieldset>
+                          <div class="row">
+                              <div class="center-block">
+                                  <img class="profile-img"
+                                       src="images/signin.png" alt="">
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="col-sm-12 col-md-10  col-md-offset-1 ">
+                                  <div class="form-group">
+                                      <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="glyphicon glyphicon-envelope"></i>
+                                            </span>
+                                          <input class="form-control" placeholder="User email" name="email" type="email" autofocus>
+                                      </div>
+                                  </div>
+                                  <div class="form-group">
+                                      <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="glyphicon glyphicon-lock"></i>
+                                            </span>
+                                          <input class="form-control" placeholder="Password" name="password" type="password" value="">
+                                      </div>
+                                  </div>
+                                  <div class="form-group">
+                                      <input type="submit" name="signin" class="btn btn-lg btn-primary btn-block" value="Sign in">
+                                  </div>
+                              </div>
+                          </div>
+
+                          <div class="row">
+                              <div class="col-sm-12 col-md-10  col-md-offset-1 ">
+                                <input type="checkbox" value="remember-me">
+                                Remember me
+                              </div>
+                          </div>
+
+                      </fieldset>
+                  </form>
+              </div>
+              <div class="panel-footer ">
+                  <a href="#" class="pull-right">Forgot password? </a>
+                  <a href="signup.php" onClick=""> Sign Up Here </a>
+              </div>
           </div>
-  				<h1 class="text-center login-title">Sign in to continue to FIST</h1>
-  				<div class="account-wall">
-  					<img class="profile-img" src="images/signin.png" alt="">
-  					<form role="form" action="signin.php" class="form-signin" method="post">
-  						<input type="text" name="email" class="form-control" placeholder="Email" required autofocus/>
-  						<input type="password" name="password" class="form-control" placeholder="Password" required/>
-  						<input type="submit" name="submit" class="btn btn-lg btn-primary btn-block" value="Sign in"/>
-  						<label class="checkbox pull-left">
-  						<input type="checkbox" value="remember-me">
-  						Remember me
-  						</label>
-  						<a href="#" class="pull-right need-help">Need help? </a><span class="clearfix"></span>
-  					</form>
-  				</div>
-  				<a href="signup.php" class="text-center new-account">Create an account </a>
-  			</div>
   		</div>
   	</div> 
 	  <!-- Bootstrap core JavaScript
