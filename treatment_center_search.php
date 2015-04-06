@@ -62,12 +62,12 @@
                   <label for="state">State:</label>
                   <?php
                       $states = array( "Andhra Pradesh","Arunachal Pradesh","Assam","Bihar","Chhattisgarh","Goa","Gujarat","Haryana","Himachal Pradesh","Jammu & Kashmir","Jharkhand","Karnataka","Kerala","Madhya Pradesh","Maharashtra","Manipur","Meghalaya","Mizoram","Nagaland","Orissa","Punjab","Rajasthan","Sikkim","Tamil Nadu","Telangana","Tripura","Uttar Pradesh","Uttarakhand","West Bengal" );
-                      $arrlength = count($states);
+                      $statescount = count($states);
                   ?>
                   <select class="form-control" name="state" id="state" onchange="enablecity()">
                     <option value="">Select a state...</option>
                     <?php
-                      for($i = 0; $i <  $arrlength; $i++) 
+                      for($i = 0; $i < $statescount; $i++)
                       {
                         echo '<option value="'.$states[$i].'">'.$states[$i].'</option>';
                       }
@@ -78,7 +78,7 @@
               <div class="col-xs-6">
                 <div class="form-group">
                   <label for="city">City:</label>
-                  <select class="form-control" name="city" id="city">
+                  <select class="form-control" name="city" id="city" disabled>
                     <option value="">Select a city...</option>
                     
                   </select>
