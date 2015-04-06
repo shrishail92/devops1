@@ -59,7 +59,11 @@
 							$email=strip_tags($_POST['email']);
 							$pass=strip_tags($_POST['password']);
 							$confirm_pass=strip_tags($_POST['c_password']);
-						 
+                            $day=strip_tags($_POST['day']);
+                            $month=strip_tags($_POST['month']);
+                            $year=strip_tags($_POST['year']);
+                            $birthday= $day."-".$month."-".$year;
+                            $gender=strip_tags($_POST['sex']);
 							$error = array();
                             if(empty($fname))
                             {
@@ -81,6 +85,14 @@
 					        {
 							  $error[] = '<div class="alert alert-warning" role="alert">Please enter Confirm password.</div>';
 							}
+                            if(empty($year))
+                            {
+                                $error[] = '<div class="alert alert-warning" role="alert">Please enter birth date.</div>';
+                            }
+                            if(empty($gender))
+                            {
+                                $error[] = '<div class="alert alert-warning" role="alert">Please select gender.</div>';
+                            }
 							if($pass != $confirm_pass)
 							{
 							   $error[] = '<div class="alert alert-warning" role="alert">Password and Confirm password are not matching.</div>';
@@ -125,7 +137,7 @@
 						            if(!count($count))
 						            {
 						        	   	//Save the New user
-						             	$user_data=array('email'=>$email,'password'=>md5($pass));             
+						             	$user_data=array('first_name'=>$fname,'last_name'=>$lname,'birthday'=>$birthday,'gender'=>$gender,'email'=>$email,'password'=>md5($pass));
 						                $collection->save($user_data);
 						             	echo '<div class="alert alert-success" role="alert">You are successfully registered. Click Sign in to enter.</div>';
 						            }
@@ -137,7 +149,7 @@
 					            }
 					            else
 					            {
-					                die("Database are not connected");
+					                die("Database is not connected");
 					            }
 							}
 							else
@@ -156,7 +168,7 @@
                         <strong> Mark your footprint in Fist</strong>
                     </div>
                     <div class="panel-body">
-                        <form role="form" action="signin.php" method="POST">
+                        <form role="form" action="signup.php" method="POST">
                             <fieldset>
                                 <div class="row">
                                     <div class="center-block">
@@ -200,7 +212,7 @@
 
                                 <div class="col-xs-4 col-md-4">
                                     <label for="year"></label>
-                                    <select name="year" id="year" class="form-control" onchange="displaydate()">
+                                    <select name="year" id="year" class="form-control" onchange="displaydate()" required>
                                         <option value="">Year</option>
                                         <?php
                                         $year=date("Y");
@@ -218,7 +230,7 @@
                                 ?>
                                 <div class="col-xs-4 col-md-4">
                                     <label for="month"></label>
-                                    <select name="month" id="month" class="form-control" onchange="displaydate()">
+                                    <select name="month" id="month" class="form-control" onchange="displaydate()" required>
                                         <option value="">Month</option>
                                         <?php
                                         for($i = 0; $i < $monthscount; $i++)
@@ -231,7 +243,7 @@
 
                                 <div class="col-xs-4 col-md-4">
                                     <label for="day"></label>
-                                    <select name="day" id="day" class="form-control" disabled>
+                                    <select name="day" id="day" class="form-control" disabled required>
                                         <option value="">Day</option>
 
                                     </select>
@@ -240,11 +252,11 @@
                             <br/>
 
                             <label class="radio-inline">
-                                <input type="radio" name="sex" id="inlineCheckbox1" value="male" />
+                                <input type="radio" name="sex" id="inlineCheckbox1" value="male" required>
                                 Male
                             </label>
                             <label class="radio-inline">
-                                <input type="radio" name="sex" id="inlineCheckbox2" value="female" />
+                                <input type="radio" name="sex" id="inlineCheckbox2" value="female">
                                 Female
                             </label>
 
