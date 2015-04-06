@@ -200,7 +200,7 @@
 
                                 <div class="col-xs-4 col-md-4">
                                     <label for="year"></label>
-                                    <select name="year" id="year" class="form-control">
+                                    <select name="year" id="year" class="form-control" onchange="displaydate()">
                                         <option value="">Year</option>
                                         <?php
                                         $year=date("Y");
