@@ -88,6 +88,7 @@
                           if(($user['email']==$email) && ($user['password']==md5($pass)))
                           {
                             echo "<div class=\"alert alert-success\" role=\"alert\">successful login</div>";
+                            header('Location:home.php');
                           }
                           else 
                           {
@@ -117,7 +118,7 @@
                                             <span class="input-group-addon">
                                                 <i class="glyphicon glyphicon-envelope"></i>
                                             </span>
-                                          <input class="form-control" placeholder="User email" name="email" type="email" autofocus>
+                                          <input class="form-control" placeholder="User email" name="email" type="email" required autofocus>
                                       </div>
                                   </div>
                                   <div class="form-group">
@@ -125,7 +126,7 @@
                                             <span class="input-group-addon">
                                                 <i class="glyphicon glyphicon-lock"></i>
                                             </span>
-                                          <input class="form-control" placeholder="Password" name="password" type="password" value="">
+                                          <input class="form-control" placeholder="Password" name="password" type="password" required>
                                       </div>
                                   </div>
                                   <div class="form-group">
