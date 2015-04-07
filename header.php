@@ -48,7 +48,7 @@
                         <h2>Contact Us</h2>
                         <hr>
                         <input id="name" name="name" placeholder="Name" type="text" required>
-                        <input id="email" name="email" placeholder="Email" type="text" required>
+                        <input id="email" name="email" placeholder="Email" type="email" required>
                         <input id="subject" name="subject" placeholder="Subject" type="text">
                         <textarea id="msg" name="message" placeholder="Message" required></textarea>
                         <input type="submit" value="send" name="contactus" id="submitbutton" onclick="progress()">
@@ -164,8 +164,6 @@
         </nav>
       <div id="headline"><span>The best way to find yourself is to lose yourself in the service of others.</span></div>
     </div>
-
-    <a href="#" class="scrollToTop" title="Scroll to top"><i class="glyphicon glyphicon-chevron-up"></i></a>
 
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
