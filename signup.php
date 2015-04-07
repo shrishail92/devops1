@@ -140,6 +140,7 @@
 						             	$user_data=array('first_name'=>$fname,'last_name'=>$lname,'birthday'=>$birthday,'gender'=>$gender,'email'=>$email,'password'=>md5($pass));
 						                $collection->save($user_data);
 						             	echo '<div class="alert alert-success" role="alert">You are successfully registered. Click Sign in to enter.</div>';
+                                        header('Location:signin.php');
 						            }
 						            else
 						            {
