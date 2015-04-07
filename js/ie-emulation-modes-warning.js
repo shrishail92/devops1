@@ -106,7 +106,6 @@ function displaydate(){
     else{
 
         $("#day").removeAttr("disabled");
-        alert(month);
 
         var days;
         switch (month) {
