@@ -46,6 +46,7 @@
   </head>
 
   <body>
+  <?php include "header.php"; ?>
 	<div class="container marketing" id="container">
         <div class="row centered-form">
 	        <div class="col-md-6 col-sm-offset-3">
@@ -281,6 +282,7 @@
 	    	</div>
 	    </div>
     </div>
+
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -289,5 +291,6 @@
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <?php include "footer.php"; ?>
   </body>
 </html>
