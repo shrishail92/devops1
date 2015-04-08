@@ -1,6 +1,6 @@
 
-@import 'http://fonts.googleapis.com/css?family=Raleway';
-/*----------------------------------------------
+/*@import 'http://fonts.googleapis.com/css?family=Raleway';
+----------------------------------------------
 CSS settings for HTML div Exact Center
 ------------------------------------------------*/
 #abc {
@@ -25,7 +25,7 @@ div#popupContact {
     top:50%;
     margin-left: -215px;
     margin-top: -160px;
-    font-family:'Raleway',sans-serif;
+   // font-family:'Raleway',sans-serif;
     width: auto;
     max-width:430px;
 }
@@ -33,7 +33,7 @@ div#view {
     padding:10px 50px;
     border:2px solid gray;
     border-radius:10px;
-    font-family:raleway;
+   // font-family:raleway;
     background-color:#fff
 }
 p #m{
