@@ -47,7 +47,7 @@
                         <img id="close" src="images/3.png" onclick ="div_hide()">
                         <h2>Contact Us</h2>
                         <hr>
-                        <input id="name" name="name" placeholder="Name" type="text" required>
+                        <input id="name" name="name" placeholder="Name" type="text" required pattern="[a-zA-Z ]{1,30}" title="Enter only characters">
                         <input id="email" name="email" placeholder="Email" type="email" required>
                         <input id="subject" name="subject" placeholder="Subject" type="text">
                         <textarea id="msg" name="message" placeholder="Message" required></textarea>
