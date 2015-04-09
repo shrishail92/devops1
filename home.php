@@ -48,7 +48,7 @@
               <div class="carousel-caption">
                 <h1>For the People and By the People</h1>
                  <p>Are you in need of help? Do you want to help to the people and be an active social worker? click the link below to join us.</p>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+                <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up now</a></p>
               </div>
             </div>
           </div>
@@ -58,7 +58,7 @@
               <div class="carousel-caption">
                 <h1></h1>
                 <p>To Know more about hemophilia. click the link below.</p>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                <p><a class="btn btn-lg btn-primary" href="about_hemophilia.php" role="button">Learn more</a></p>
               </div>
             </div>
           </div>
@@ -132,7 +132,7 @@
           the awareness events we conduct for people, patients and their family by actively taking part in hempohilia walk, blood donation
           campaigns and other activities.</span><br/><span class="para">We are really happy to see you being an active supporter to fight against
           himophilia, the deadly disease. Come on let us all work together and save thousands of lives. You will be informed at the time of events. </span></p>
-          <center><p><a class="btn btn-info" href="#" role="button">Join Us Now &raquo;</a></p></center>
+          <center><p><a class="btn btn-info" href="signup.php" role="button">Join Us Now &raquo;</a></p></center>
         </div>
         <div class="col-md-5">
           <img class="featurette-image img-responsive" src="images/get_involved.png" alt="Generic placeholder image">
