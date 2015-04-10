@@ -41,7 +41,7 @@
         <div style="overflow:hidden;">
             <div id="abc">
                 <!-- Popup Div Starts Here -->
-                <div id="popupContact">
+                <div id="popupContactf">
                     <!-- Contact Us Form -->
                     <form action=<?php echo $_SERVER['PHP_SELF'];?> id="form" method="post" name="form">
                         <img id="close" src="images/3.png" onclick ="div_hide()">
