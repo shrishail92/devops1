@@ -41,7 +41,7 @@
         <div style="overflow:hidden;">
             <div id="abc">
                 <!-- Popup Div Starts Here -->
-                <div id="popupContactf">
+                <div id="popupContact">
                     <!-- Contact Us Form -->
                     <form action=<?php echo $_SERVER['PHP_SELF'];?> id="form" method="post" name="form">
                         <img id="close" src="images/3.png" onclick ="div_hide()">
@@ -149,7 +149,7 @@
 
               </ul>
 
-              <ul class="nav navbar-nav navbar-right">
+              <div class="nav navbar-nav navbar-right">
                 <div class="pull-right hidden-xs">
                   <a href="#" class="" data-toggle="dropdown"><h5><i class="glyphicon glyphicon-user"></i>&nbsp;<i class="glyphicon glyphicon-collapse-down"></i></h5></a>
                   <ul class="dropdown-menu">
@@ -157,7 +157,7 @@
                       <li><a href="signup.php"><i class="glyphicon glyphicon-share-alt"></i> Signup</a></li>
                   </ul>
                 </div>
-              </ul>
+              </div>
 
             </div>
 
