@@ -1,43 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
+<html lang="en-US">
+<head>
+	
+	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="navigation">
     <meta name="author" content="shrishail sh">
     <link rel="icon" href="images/logo1.png">
 
-    <title>Fist | Header</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/popupcontact.css" rel="stylesheet">
-
-      <script src="js/jquery-2.1.3.min.js"></script>
-
-      <!-- This is what you need -->
-      <script src="sweetalert-master/lib/sweet-alert.min.js"></script>
-      <link rel="stylesheet" href="sweetalert-master/lib/sweet-alert.css">
-
+	<title>Header</title>
+	
+	<link href="WordPress/dashicons.css" rel="stylesheet" type="text/css">
+	<link href="WordPress/css.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="WordPress/wp4.css">
+	<link media="only screen and (max-device-width: 480px)" href="WordPress/iphone.css" type="text/css" rel="stylesheet">
+	<link rel="pingback" href="#">
+	<link href="css/popupcontact.css" rel="stylesheet">
+	<link rel="stylesheet" href="sweetalert-master/lib/sweet-alert.css">
+    
     <script src="js/popup.js"></script>
+	<script type="text/javascript" async="" src="WordPress/quant.js"></script>
+	<script src="WordPress/ga.js" async="" type="text/javascript"></script>
+	<script src="sweetalert-master/lib/sweet-alert.min.js"></script>
+	<script src="js/ie-emulation-modes-warning.js"></script>
+	<script src="js/jquery-2.1.3.min.js"></script>
+	<style type="text/css">
+	img.wp-smiley,
+	img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 .07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+	</style>
+	<link rel="stylesheet" id="wporg-themes-css" href="WordPress/style.css" type="text/css" media="all">
+	<link rel="stylesheet" id="jetpack_css-css" href="WordPress/jetpack.css" type="text/css" media="all">
+	<script type="text/javascript" src="WordPress/jquery.js"></script>
+	<script type="text/javascript" src="WordPress/jquery-migrate.js"></script>
+	<script type="text/javascript" src="WordPress/jsapi"></script>
+	<script>document.cookie='devicePixelRatio='+((window.devicePixelRatio === undefined) ? 1 : window.devicePixelRatio)+'; path=/';</script>
+	<script type="text/javascript">
+	var toggleMenu = function(){
+	    var m = document.getElementById('wporg-header-menu'),
+	        c = m.className;
+		    m.className = c.match( ' active' ) ? c.replace( ' active', '' ) : c + ' active';
+	}
+	</script>
+</head>
 
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="js/ie-emulation-modes-warning.js"></script>
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="js/html5shiv.min.js"></script>
-      <script src="js/respond.min.js"></script>
-    <![endif]-->
-    <!-- Custom styles for this template -->
-    <link href="carousel.css" rel="stylesheet">
-  </head>
-<!-- NAVBAR
-==================================================-->
-  <body>
-
-        <!-- popup contact form -->
+<body id="wordpress-org" class="home blog">
+	<!-- popup contact form -->
         <div style="overflow:hidden;">
             <div id="abc">
                 <!-- Popup Div Starts Here -->
@@ -65,25 +83,18 @@
         </div>
 
         <!-- popup contact form ends here -->
-
-    <div class="navbar-wrapper">
-
-        <nav class="navbar navbar-inverse">
-
-            <ul class="nav navbar-nav adjust">
-              <li>
-                <a href="index.php">
+	<div id="wporg-header">
+		<div class="wrapper">
+			<a id="mobile-menu-button" class="" href="#" onclick="toggleMenu();"></a>
+			<h1><a href="index.php" title="Future India Social Trust">
                   <img src="images/Helping_Hands_cropped.jpg" class="logo" height="55px" width="55px" alt="logo"/>
+                  <span>{ F.I.S.T }</span>
                 </a>
-              </li>
-              <li class="navbar-brand"><h1><span FACE="algerian">Future India Social Trust</span></h1></li>
-              <li>
-              </li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
+            </h1>				
+			<ul class="nav navbar-nav navbar-right">
                 <li>
                   <div class="col-lg-12">
-                    <div class="input-group">
+                    <div class="input-group" style="margin-right:11px; max-width:270px;">
                       <input type="search" class="form-control searchbox" placeholder="Search here...">
                       <span class="input-group-btn">
                         <button class="btn btn-default searchbutton" type="button"><i class="glyphicon glyphicon-search"></i></button>
@@ -92,90 +103,99 @@
                   </div><!-- /.col-lg-6 -->
                 </li>
             </ul>
+			<div style="clear:both"></div>
+			
+				<ul id="wporg-header-menu">
 
+					<li>
+						<a href="home.php" title="Go to home page" class="current"><i class="glyphicon glyphicon-home"></i>&nbsp;Home</a>
+						<div class="uparrow"></div>
+					</li>
 
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-            </div>
+					<li>
+						<a href="#">Hemophilia <span class="caret"></span></a>
+						<ul class="nav-submenu">
+							<li>
+								<a href="history_hemophilia.php" title="History of hemophilia.">History</a>
+							</li>
+							<li>
+								<a href="statistics_hemophilia.php" title="Statistics in india and world.">Statistics</a>
+							</li>
+							<li>
+								<a href="about_hemophilia.php" title="Details about hemophilia">About Hemophilia</a>
+							</li>
 
-            <div class="navbar-collapse collapse" id="navbar">
-              <ul class="nav navbar-nav">
-                <li class="active"><a href="home.php"><i class="glyphicon glyphicon-home"></i>&nbsp;Home</a></li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Hemophilia <span class="caret"></span></a>
-                  <ul class="dropdown-menu" role="menu">
-                    <li><a href="history_hemophilia.php">History</a></li>
-                    <li><a href="statistics_hemophilia.php">Statistics</a></li>
-                    <li><a href="about_hemophilia.php">About Himophilia</a></li>
-                    <li class="divider"></li>
-                    <li class="dropdown-header">Know More</li>
-                    <li><a href="#">Ongoing Researches</a></li>
-                    <li><a href="#">Employment Opportunities</a></li>
-                  </ul>
-                </li>
+						</ul>
+						<div class="uparrow"></div>
+					</li>
 
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Patient Education <span class="caret"></span></a>
-                  <ul class="dropdown-menu" role="menu">
-                    <li><a href="guides_hemophilia.php">Guides / Manuals</a></li>
-                    <li><a href="glossary_hemophilia.php">Glossary</a></li>
-                    <li><a href="videos_hemophilia.php">Videos</a></li> 
-                  </ul>
-                </li>
+					<li>
+						<a href="#">Patient Education <span class="caret"></span></a>
+						<ul class="nav-submenu">
+							<li>
+								<a href="videos_hemophilia.php" title="Educational videos">Videos</a>
+							</li>
+							<li>
+								<a href="glossary_hemophilia.php" title="Meanings for words.">Glossary</a>
+							</li>
+							<li>
+								<a href="guides_hemophilia.php" title="Pdf documents.">Guides / Manuals</a>
+							</li>
+						</ul>
+						<div class="uparrow"></div>
+					</li>
 
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Health Care <span class="caret"></span></a>
-                  <ul class="dropdown-menu" role="menu">
-                    <li><a href="#">Medicines</a></li>
-                    <li><a href="treatment_center_search.php">Treatment Centers</a></li>
-                  </ul>
-                </li>
+					<li>
+						<a href="#">Health Care <span class="caret"></span></a>
+						<ul class="nav-submenu">
+							<li>
+								<a href="#" title="">Medicines</a>
+							</li>
+							<li>
+								<a href="treatment_center_search.php" title="Documentation, tutorials, best practices.">Treatment Centers</a>
+							</li>
+						</ul>
+						<div class="uparrow"></div>
+					</li>
 
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Projects <span class="caret"></span></a>
-                  <ul class="dropdown-menu" role="menu">
-                    <li><a href="#">Ongoing</a></li>
-                    <li><a href="#">Completed</a></li>
-                  </ul>
-                </li>
+					<li>
+						<a href="#">About us</a>
+					</li>
 
-                <li><a href="#">About us</a></li>
-                <li><a href="#" onclick="div_show()"><i class="glyphicon glyphicon-envelope"></i>&nbsp;Contact us</a></li>
+                	<li>
+                		<a href="#" onclick="div_show()"><i class="glyphicon glyphicon-envelope"></i>&nbsp;Contact us</a>
+                	</li>
+					<li style="float:right;">
+						<a href="#"><i class="glyphicon glyphicon-user"></i>&nbsp;<i class="glyphicon glyphicon-collapse-down"></i></a>
+						<ul class="nav-submenu">
+							<li><a href="signin.php"><i class="glyphicon glyphicon-log-in"></i> Signin</a></li>
+                      		<li><a href="signup.php"><i class="glyphicon glyphicon-share-alt"></i> Signup</a></li>
+						</ul>
+						<div class="uparrow"></div>
+					</li>
+				</ul>
+				<div style="clear:both">
+					
+				</div>
+			</div>
+		</div>
 
-              </ul>
+		<div id="headline">
+			<div class="wrapper">
+				<h2 class="site-title">The best way to find yourself is to lose yourself in the service of others.</h2>
+			</div>
+		</div>
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<div id="menu-theme-directory" class="menu">
+				<marquee><a href="#">Watch out for latest news here</a></marquee>
+			</div>
+		</nav>
+	</body>
 
-              <div class="nav navbar-nav navbar-right">
-                <div class="pull-right hidden-xs">
-                  <a href="#" class="" data-toggle="dropdown"><h5><i class="glyphicon glyphicon-user"></i>&nbsp;<i class="glyphicon glyphicon-collapse-down"></i></h5></a>
-                  <ul class="dropdown-menu">
-                      <li><a href="signin.php"><i class="glyphicon glyphicon-log-in"></i> Signin</a></li>
-                      <li><a href="signup.php"><i class="glyphicon glyphicon-share-alt"></i> Signup</a></li>
-                  </ul>
-                </div>
-              </div>
-
-            </div>
-
-        </nav>
-      <div id="headline"><span>The best way to find yourself is to lose yourself in the service of others.</span></div>
-    </div>
-
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/docs.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="js/ie10-viewport-bug-workaround.js"></script>
-  </body>
-
-  <?php
+	<?php
       if(isset($_POST['contactus']))
       {
-          require_once 'swiftmailer-5.x/lib/swift_required.php';
+          require_once 'Swift-5.1.0/lib/swift_required.php';
           ini_set('max_execution_time', 600);
           $sub="contact fist";
           $name=$_POST['name'];
@@ -210,6 +230,6 @@
           <?php
           }
       }
-  ?>
+  	?>
 
 </html>
