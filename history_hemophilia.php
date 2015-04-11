@@ -8,7 +8,7 @@
     <meta name="author" content="shrishail sh">
 
     <title>Fist | History of hemophilia</title>
-
+	
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -27,7 +27,7 @@
   </head>
 
   <body>
-    <?php include "header.php" ?>
+    <?php include "headerwordpress.html" ?>
     <div class="container marketing" id="container">
       
       <div class="row row-offcanvas row-offcanvas-right">
