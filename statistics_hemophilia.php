@@ -88,7 +88,7 @@
           </div>
           <p class="text-justify">   
           <br/><span class="para">
-          (a) Haemophilia A trends in four high burden countries. Numbers in parenthesis show the number of patients reported in 
+          (a) Hemophilia A trends in four high burden countries. Numbers in parenthesis show the number of patients reported in
           the last five years by each country. (b) Per capita clotting factor VIII consumption (Y-axis) and number of haemophilia 
           patients reported in 2011 for the four high burden countries.
           </span><br/>
