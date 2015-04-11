@@ -27,15 +27,15 @@
   </head>
 
   <body>
-    <?php include "headerwordpress.html" ?>
+    <?php include "header.php" ?>
     <div class="container marketing" id="container">
       
       <div class="row row-offcanvas row-offcanvas-right">
         
         <div class="col-xs-12 col-sm-9">
-          <p class="pull-right visible-xs">
+          <!--<p class="pull-right visible-xs">
             <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
-          </p>
+          </p>-->
           <div class="jumbotron">
             <h2 class="featurette-heading">History of <span class="text-muted">Hemophilia!</span></h2>
             <p class="lead text-justify">
