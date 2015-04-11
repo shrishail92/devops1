@@ -24,12 +24,11 @@
 	}
 	.uiBoxLight {
     	background-color: #EDEFF4;
-    	//border: 1px solid #D8DFEA;
+    	border: none !important;
     	padding: 15px 5px 15px 10px;
     	//font-weight: bold;
     	font-size: 14px;
-		border-radius: 15px 15px 0 0;
-		
+		border-radius: 12px 12px 0 0;
 		color: #666;
 	}
 	</style>
@@ -48,7 +47,7 @@
 
 <body>
 <div id="fb-root">
-<p class="uiBoxLight">Reach us on Facebook</p>
+<span class="list-group-item-heading uiBoxLight">Reach us on Facebook</span>
 <div class="fb-like-box" data-href="https://www.facebook.com/RoyaPCtricks" data-width="250" data-height="452" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
 </div>
 </body>
