@@ -1,16 +1,16 @@
+<?php
+ob_start();
+?>
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-	
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="navigation">
     <meta name="author" content="shrishail sh">
     <link rel="icon" href="images/logo1.png">
-
 	<title>Header</title>
-	
 	<link href="WordPress/dashicons.css" rel="stylesheet" type="text/css">
 	<link href="WordPress/css.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="WordPress/wp4.css">
@@ -18,7 +18,6 @@
 	<link rel="pingback" href="#">
 	<link href="css/popupcontact.css" rel="stylesheet">
 	<link rel="stylesheet" href="sweetalert-master/lib/sweet-alert.css">
-    
     <script src="js/popup.js"></script>
 	<script type="text/javascript" async="" src="WordPress/quant.js"></script>
 	<script src="WordPress/ga.js" async="" type="text/javascript"></script>
@@ -65,11 +64,11 @@
                         <img id="close" src="images/3.png" onclick ="div_hide()">
                         <h2>Contact Us</h2>
                         <hr>
-                        <input id="name" name="name" placeholder="Name" type="text" required pattern="[a-zA-Z ]{1,30}" title="Enter only characters">
-                        <input id="email" name="email" placeholder="Email" type="email" required>
-                        <input id="subject" name="subject" placeholder="Subject" type="text">
+                        <input id="name" name="name" placeholder="Name" type="text" required pattern="[a-zA-Z ]{1,30}" title="Enter only characters"/>
+                        <input id="email" name="email" placeholder="Email" type="email" required/>
+                        <input id="subject" name="subject" placeholder="Subject" type="text"/>
                         <textarea id="msg" name="message" placeholder="Message" required></textarea>
-                        <input type="submit" value="send" name="contactus" id="submitbutton" onclick="progress()">
+                        <input type="submit" value="send" name="contactus" id="submitbutton" onclick="progress()"/>
                         <div id="progress">
                             <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
                                 <span class="sr-only">99% Complete</span>
@@ -166,7 +165,7 @@
                 		<a href="#" onclick="div_show()"><i class="glyphicon glyphicon-envelope"></i>&nbsp;Contact us</a>
                 	</li>
 					<li style="float:right;">
-						<a href="#"><i class="glyphicon glyphicon-user"></i>&nbsp;<i class="glyphicon glyphicon-collapse-down"></i></a>
+                        <a href="#"><i class="glyphicon glyphicon-user"></i>&nbsp;<i class="glyphicon glyphicon-collapse-down"></i></a>
 						<ul class="nav-submenu">
 							<li><a href="signin.php"><i class="glyphicon glyphicon-log-in"></i> Signin</a></li>
                       		<li><a href="signup.php"><i class="glyphicon glyphicon-share-alt"></i> Signup</a></li>
@@ -192,44 +191,44 @@
 		</nav>
 	</body>
 
-	<?php
-      if(isset($_POST['contactus']))
-      {
-          require_once 'Swift-5.1.0/lib/swift_required.php';
-          ini_set('max_execution_time', 600);
-          $sub="contact fist";
-          $name=$_POST['name'];
-          $sender=$_POST['email'];
-          $msg=$_POST['message'];
-          $sub=$_POST['subject'];
+<?php
+    if(isset($_POST['contactus']))
+    {
+        require_once 'Swift-5.1.0/lib/swift_required.php';
+        ini_set('max_execution_time', 600);
+        $sub="contact fist";
+        $name=$_POST['name'];
+        $sender=$_POST['email'];
+        $msg=$_POST['message'];
+        $sub=$_POST['subject'];
 
-          $transport = Swift_SmtpTransport::newInstance('smtp.gmail.com', 465, "ssl")
-              ->setUsername('fist4hemophilia@gmail.com')
-              ->setPassword('fist4hemophilia92');
+        $transport = Swift_SmtpTransport::newInstance('smtp.gmail.com', 465, "ssl")
+            ->setUsername('fist4hemophilia@gmail.com')
+            ->setPassword('fist4hemophilia92');
 
-          $mailer = Swift_Mailer::newInstance($transport);
+        $mailer = Swift_Mailer::newInstance($transport);
 
-          $message = Swift_Message::newInstance($sub)
-              ->setFrom(array($sender => $sender))
-              ->setTo(array('fist4hemophilia@writeme.com'))
-              ->setBody($msg);
+        $message = Swift_Message::newInstance($sub)
+            ->setFrom(array($sender => $sender))
+            ->setTo(array('fist4hemophilia@writeme.com'))
+            ->setBody($msg);
 
-          $result = $mailer->send($message);
-          if($result==1)
-          {?>
-              <script type='text/javascript'>
-                  swal("Good job!", "Thank you for contacting us. We will reach you very soon.", "success");
-              </script>
-          <?php
-          }
-          else
-          {?>
-              <script type='text/javascript'>
-                  swal("Oops...!", "Something went wrong! Try again after some time.", "error");
-              </script>
-          <?php
-          }
-      }
-  	?>
+        $result = $mailer->send($message);
+        if($result==1)
+        {?>
+            <script type='text/javascript'>
+                swal("Good job!", "Thank you for contacting us. We will reach you very soon.", "success");
+            </script>
+        <?php
+        }
+        else
+        {?>
+            <script type='text/javascript'>
+                swal("Oops...!", "Something went wrong! Try again after some time.", "error");
+            </script>
+        <?php
+        }
+    }
+?>
 
 </html>

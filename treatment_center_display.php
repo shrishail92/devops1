@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -26,7 +30,16 @@
   </head>
 
   <body>
-    <?php include "header.php" ?>
+  <?php
+  if(isset($_SESSION['user']))
+  {
+      include('headerlogin.php');
+  }
+  else
+  {
+      include('header.php');
+  }
+  ?>
     <div class="container marketing" id="container">
       
       <div class="row row-offcanvas row-offcanvas-right">
@@ -62,20 +75,20 @@
                   print $connectionException;
                   exit;
                 }
-                $data  = "<div class='table-responsive'>"; 
-                $data .= "<table class='table table-striped table-hover' style='background:#fff;'>";
-                $data .= "<thead>";
-                $data .= "<tr>";
-                $data .= "<th>Name</th>";
-                $data .= "<th>Address</th>";
-                $data .= "<th>City</th>";
-                $data .= "<th>Pincode</th>";
-                $data .= "<th>Contact Person</th>";
-                $data .= "<th>Phone</th>";
-                $data .= "<th>Email</th>";
-                $data .= "</tr>";
-                $data .= "</thead>";
-                $data .= "<tbody>";
+                $data  = '<div class="table-responsive">';
+                $data .= '<table class="table table-striped table-hover" style="background:#fff;">';
+                $data .= '<thead>';
+                $data .= '<tr>';
+                $data .= '<th>Name</th>';
+                $data .= '<th>Address</th>';
+                $data .= '<th>City</th>';
+                $data .= '<th>Pincode</th>';
+                $data .= '<th>Contact Person</th>';
+                $data .= '<th>Phone</th>';
+                $data .= '<th>Email</th>';
+                $data .= '</tr>';
+                $data .= '</thead>';
+                $data .= '<tbody>';
                 try
                 {
                   $db = $m->FIST;
@@ -91,23 +104,23 @@
                     // iterate cursor to display title of documents
                     foreach ( $cursor as $document )
                     {
-                      $data .= "<tr>";
-                      $data .= "<td>" . $document["name"] . "</td>";
-                      $data .= "<td>" . $document["address"]."</td>";
-                      $data .= "<td>" . $document["city"]."</td>";
-                      $data .= "<td>" . $document["pincode"]."</td>";
-                      $data .= "<td>" . $document["contact"]."</td>";
-                      $data .= "<td>" . $document["phone"]."</td>";
-                      $data .= "<td>" . $document["email"]."</td>";
-                      $data .= "</tr>";
+                      $data .= '<tr>';
+                      $data .= '<td>' . $document['name'] . '</td>';
+                      $data .= '<td>' . $document['address']. '</td>';
+                      $data .= '<td>' . $document['city']. '</td>';
+                      $data .= '<td>' . $document['pincode']. '</td>';
+                      $data .= '<td>' . $document['contact']. '</td>';
+                      $data .= '<td>' . $document['phone']. '</td>';
+                      $data .= '<td>' . $document['email']. '</td>';
+                      $data .= '</tr>';
                     }
-                    $data .= "</tbody>";
-                    $data .= "</table></div>";
+                    $data .= '</tbody>';
+                    $data .= '</table></div>';
                     echo $data;
                   }
                   else
                   {
-                    echo "<div class=\"alert alert-danger\" role=\"alert\">Sorry! No results found for your search criteria. Try again...</div>";
+                    echo '<div class="alert alert-danger" role="alert">Sorry! No results found for your search criteria. Try again...</div>';
                   }
                 }
                 catch(MongoException $mongoException)

@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -27,7 +31,16 @@
   </head>
 
   <body>
-    <?php include "header.php" ?>
+  <?php
+  if(isset($_SESSION['user']))
+  {
+      include('headerlogin.php');
+  }
+  else
+  {
+      include('header.php');
+  }
+  ?>
     <div class="container marketing" id="container">
       
       <div class="row row-offcanvas row-offcanvas-right">

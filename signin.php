@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -25,22 +29,27 @@
       <script src="js/respond.min.js"></script>
     <![endif]-->
   </head>
-
   <body>
-  <?php include "header.php" ?>
+  <?php
+  if(isset($_SESSION['user']))
+  {
+      include('headerlogin.php');
+  }
+  else
+  {
+      include('header.php');
+  }
+  ?>
   <div class="container marketing" id="container" style="margin-top:40px">
   	 <div class="row">
   		<div class="col-sm-6 col-md-4 col-md-offset-4">
-
             <?php
                 if(isset($_POST['signin']))
                 {
                     //getting post variable
                     $email=strip_tags($_POST['email']);
                     $pass=strip_tags($_POST['password']);
-
                     $error = array();
-
                     if(empty($email) or !filter_var($email,FILTER_SANITIZE_EMAIL))
                     {
                       $error[] = '<div class="alert alert-warning" role="alert">Email id is empty or invalid !</div>';
@@ -49,19 +58,15 @@
                     {
                       $error[] = '<div class="alert alert-warning" role="alert">Please enter password.</div>';
                     }
-
                     if(count($error)==0)
                     {
-
                             //database configuration
                             $host = 'localhost';
                             $database_name = 'FIST';
                             $database_user_name = '';
                             $database_password = '';
-
                             //if you have database user name & password then connection may be
                             //$connection=new Mongo("mongodb://$database_user_name:$database_password@$dbhost");
-
                             //Currently we are connecting to mongodb without authentication
                             try
                             {
@@ -72,7 +77,6 @@
                               print $connectionException;
                               exit;
                             }
-
                             //checking the mongo database connection
                             if($connection)
                             {
@@ -89,6 +93,9 @@
                               if(($user['email']==$email) && ($user['password']==md5($pass)))
                               {
                                 echo '<div class="alert alert-success" role="alert">successful login</div>';
+                                $username= $user['first_name'];
+                                $username.= ' ' . $user['last_name'];
+                                $_SESSION['user']=$username;
                                 header('Location:home.php');
                               }
                               else
@@ -109,7 +116,7 @@
                             <div class="row">
                                 <div class="center-block">
                                     <img class="profile-img"
-                                         src="images/signin.png" alt="">
+                                         src="images/signin.png" alt="signin image">
                                 </div>
                             </div>
                             <div class="row">

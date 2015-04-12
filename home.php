@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,29 +10,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Home page">
     <meta name="author" content="shrishail sh">
-
     <title>Fist | Home</title>
-
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="js/ie-emulation-modes-warning.js"></script>
-
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="js/html5shiv.min.js"></script>
       <script src="js/respond.min.js"></script>
     <![endif]-->
-
     <!-- Custom styles for this template -->
     <link href="carousel.css" rel="stylesheet">
   </head>
 <!-- NAVBAR
 ================================================== -->
   <body>
-    <?php include('header.php'); ?>
+    <?php
+    if(isset($_SESSION['user']))
+    {
+        include('headerlogin.php');
+    }
+    else
+    {
+        include('header.php');
+    }
+    ?>
     <div class="container marketing" id="container">
       
       <!--<hr class="featurette-divider">-->
@@ -48,7 +56,7 @@
               <div class="carousel-caption">
                 <h1>For the People and By the People</h1>
                  <p>Are you in need of help? Do you want to help to the people and be an active social worker? click the link below to join us.</p>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up now</a></p>
+                <p><a class="btn btn-lg btn-primary" href="signup.php" role="button">Sign up now</a></p>
               </div>
             </div>
           </div>
