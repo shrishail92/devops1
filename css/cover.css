@@ -166,16 +166,18 @@ body {
   -webkit-animation: 3s animate infinite;
   -o-animation: 3s animate infinite;
   animation: mymove 10s linear infinite 1s;
+  -webkit-animation: mymove 10s linear infinite 1s; //chrome
   margin: 10px 0px 17px 0px;
   z-index: 100;
 }
 
-@keyframes mymove {
+/*chrome*/
+@-webkit-keyframes mymove {
   from {
-    transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
   }
   to {
-    transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
   }
   0%   {background-color: #FF9933;}
   33%  {background-color: #FFF;}
@@ -183,6 +185,18 @@ body {
   99% {background-color: #FF9933;}
 }
 
+@keyframes mymove {
+from {
+    transform: rotate(0deg);
+}
+to {
+    transform: rotate(360deg);
+}
+0%   {background-color: #FF9933;}
+33%  {background-color: #FFF;}
+66% {background-color: #138808;}
+99% {background-color: #FF9933;}
+}
 /*
  * Footer
  */
