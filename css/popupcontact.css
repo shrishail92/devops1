@@ -1,6 +1,6 @@
 
-@import "http://fonts.googleapis.com/css?family=Raleway";
-/*----------------------------------------------
+/*@import "http://fonts.googleapis.com/css?family=Raleway";
+----------------------------------------------
 CSS settings for HTML div Exact Center
 ------------------------------------------------*/
 #abc {
@@ -25,7 +25,7 @@ left:50%;
 top:50%;
 margin-left: -215px;
 margin-top: -290px;
-font-family:'Raleway',sans-serif;
+//font-family:'Raleway',sans-serif;
 width: auto;
 max-width:430px;
 }
@@ -35,7 +35,7 @@ min-width:450px;
 padding:10px 50px;
 border:2px solid gray;
 border-radius:10px;
-font-family:raleway;
+//font-family:raleway;
 background-color:#fff
 }
 
@@ -58,7 +58,7 @@ div#popupContact input[type=text],div#popupContact input[type=email] {
     border:1px solid #5BC0DE;
     padding: 10px 10px 10px 40px;
     font-size:16px;
-    font-family:raleway;
+    //font-family:raleway;
 }
 
 div#popupContact input[type=text]:focus,div#popupContact input[type=text]:focus,div#popupContact textarea:focus{
@@ -85,21 +85,24 @@ div#popupContact textarea {
     border:1px solid #5BC0DE;
     padding: 10px 10px 10px 40px;
     font-size:16px;
-    font-family:raleway;
+    //font-family:raleway;
 }
 #submitbutton {
 text-decoration:none;
 width:100%;
 text-align:center;
 display:block;
-background-color:#5BC0DE;
+background:#5BC0DE !important;
 color: rgb(255, 255, 255);
 border:1px solid #0BC0DE;
-padding:10px 0;
+padding:10px 0 !important;
 font-size:20px;
 cursor:pointer;
 border-radius:5px;
 margin-bottom: 10px;
+text-shadow: none;
+box-shadow: none;
+height: 50px;
 }
 
 #submitbutton:hover{
