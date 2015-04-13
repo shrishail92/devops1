@@ -3,202 +3,212 @@
 /* Padding below the footer and lighter body text */
 
 body {
-  padding-bottom: 0;
-  color: #5a5a5a;
+    padding-bottom: 0;
+    color: #5a5a5a;
 }
 
 .logo {
-  border-radius: 50%;
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
-  background-color: #ddd;
-  border: 1px solid #eee;
-  padding: 1px; 
-  opacity: 0.8;
+    border-radius: 50%;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+    background-color: #ddd;
+    border: 1px solid #eee;
+    padding: 1px;
+    opacity: 0.8;
 }
 
-.logo:hover{
-  box-shadow: 0 0 6px 1px #C2D3E1;
-  transition: all .3s linear 0s;
-  opacity: 1;
+.logo:hover {
+    box-shadow: 0 0 6px 1px #C2D3E1;
+    transition: all .3s linear 0s;
+    opacity: 1;
 }
 
 .img-shadow {
-  border-radius: 50%;
-  box-shadow: 0 0 10px 3px #C2D3E1;
-  background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 3px #C2D3E1;
+    background-color: #fff;
 }
+
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
 
 /* Special class on .container surrounding .navbar, used for positioning it into place. */
 .navbar-wrapper {
-  //margin:1.5% 6.6% 1.5% 6.6%;
-  z-index: 20;
+    //margin : 1.5% 6.6% 1.5% 6.6%;
+    z-index: 20;
 }
 
 /* Flip around the padding for proper display in narrow viewports */
 .navbar-wrapper > .container {
-  padding-right: 0;
-  padding-left: 0;
+    padding-right: 0;
+    padding-left: 0;
 }
+
 .navbar-wrapper .navbar {
-  padding-right: 15px;
-  padding-left: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
 }
+
 .navbar-wrapper .navbar .container {
-  width: auto;
+    width: auto;
 }
 
 .dropdown:hover .dropdown-menu {
     display: block;
- }
+}
 
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 
 /* Carousel base class */
 .carousel {
-  height: auto;
-  //margin: 6% 7% 2% 7%;
-  position: relative;
-  //box-shadow: 0px 0px 30px 3px #666;
+    height: auto;
+    //margin : 6% 7% 2% 7%;
+    position: relative;
+    //box-shadow : 0px 0px 30px 3px #666;
 }
 
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
-  z-index: 10;
+    z-index: 10;
 }
 
 /* Declare heights because of positioning of img element */
 .carousel .item {
-  height: 500px;
-  background-color: #777;
-}
-.carousel-inner > .item > img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  height: 500px;
+    height: 500px;
+    background-color: #777;
 }
 
+.carousel-inner > .item > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 500px;
+}
 
 /* MARKETING CONTENT
 -------------------------------------------------- */
 
 /* Center align the text within the three columns below the carousel */
 .marketing .col-lg-4 {
-  margin-bottom: 20px;
-  text-align: center;
-}
-.marketing h2 {
-  font-weight: normal;
-}
-.marketing .col-lg-4 p {
-  margin-right: 10px;
-  margin-left: 10px;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
+.marketing h2 {
+    font-weight: normal;
+}
+
+.marketing .col-lg-4 p {
+    margin-right: 10px;
+    margin-left: 10px;
+}
 
 /* Featurettes
 ------------------------- */
 
 .featurette-divider {
-  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+    margin: 80px 0; /* Space out the Bootstrap <hr> more */
 }
 
 .featurette-divider-small {
-  margin: 40px 0; /* Space out the Bootstrap <hr> more */
+    margin: 40px 0; /* Space out the Bootstrap <hr> more */
 }
-
 
 /* Thin out the marketing headings */
 .featurette-heading {
-  font-weight: 300;
-  line-height: 1;
-  letter-spacing: -1px;
-  font-family: "Squada One","Helvetica Neue",Helvetica,Arial;
-  text-shadow: 1px 1px #FFF, 2px 2px #2A2829;
-  background-image: url(images/stripes_black.png);
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -1px;
+    font-family: "Squada One", "Helvetica Neue", Helvetica, Arial;
+    text-shadow: 1px 1px #FFF, 2px 2px #2A2829;
+    background-image: url(images/stripes_black.png);
 }
-
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
 @media (min-width: 768px) {
-  /* Navbar positioning foo */
-  .navbar-wrapper {
-    //margin-top: 0px;
-  }
-  .navbar-wrapper .container {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-  .navbar-wrapper .navbar {
-    padding-right: 0;
-    padding-left: 0;
-  }
+    /* Navbar positioning foo */
+    .navbar-wrapper {
+    //margin-top : 0px;
+    }
 
-  /* The navbar becomes detached from the top, so we round the corners */
-  .navbar-wrapper .navbar {
-    border-radius:0;
-    padding: 0 10.8% 0 9.6%; 
-    /* border-top: 5px solid #111; */
-  }
+    .navbar-wrapper .container {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
 
-  /* Bump up size of carousel content */
-  .carousel-caption p {
-    margin-bottom: 20px;
-    font-size: 21px;
-    line-height: 1.4;
-  }
+    .navbar-wrapper .navbar {
+        padding-right: 0;
+        padding-left: 0;
+    }
 
-  .featurette-heading {
-    font-size: 50px;
-  }
+    /* The navbar becomes detached from the top, so we round the corners */
+    .navbar-wrapper .navbar {
+        border-radius: 0;
+        padding: 0 10.8% 0 9.6%;
+        /* border-top: 5px solid #111; */
+    }
+
+    /* Bump up size of carousel content */
+    .carousel-caption p {
+        margin-bottom: 20px;
+        font-size: 21px;
+        line-height: 1.4;
+    }
+
+    .featurette-heading {
+        font-size: 50px;
+    }
 }
 
 @media (min-width: 992px) {
-  .featurette-heading {
-    margin-top: 0;
-  }
+    .featurette-heading {
+        margin-top: 0;
+    }
 }
 
-footer
-{
-    //border:1px solid #101010;
+footer {
+    //border : 1px solid #101010;
     background: #0C0C0C url('images/bg-footer.jpg') repeat scroll 0 0;
-    height:50px;
+    height: 50px;
     width: auto;
     box-shadow: 0 3px 30px #333;
     border-radius: 0;
-    padding:15px 10.6% 15px 9.6%;
-    //margin:0% 6.6% 0% 6.6%;
+    padding: 15px 10.6% 15px 9.6%;
+    //margin : 0% 6.6% 0% 6.6%;
     margin-top: 1.3%;
     border-top: 5px solid #333;
 }
 
-.searchbox{
-  color: #999;
-  font-family: "Abel",Helvetica,Sans Serif;
-  border-color: #999 #AAA #CCC;
-  box-shadow: 0 1px 2px #AAA inset;
-  background-image: linear-gradient(to bottom, #E6E6E6 0px, #DCDCDC 100%);
+.searchbox {
+    color: #999;
+    font-family: "Abel", Helvetica, Sans Serif;
+    border-color: #999 #AAA #CCC;
+    box-shadow: 0 1px 2px #AAA inset;
+    background-image: linear-gradient(to bottom, #E6E6E6 0px, #DCDCDC 100%);
+    transition: all 0.5s linear 0s;
 }
 
-.searchbutton{
-  text-shadow: 0 1px 0 #FFF;
-  border-color: #CCC #CCC #AAA;
-  box-shadow: 0 0 1px #FFF inset;
-  background: #E0E0E0 linear-gradient(to bottom, #FAFAFA 0px, #DCDCDC 100%);
+.searchbox:focus {
+    width: 120%;
+    margin-left: -20%;
+    transition: all 0.5s linear 0s;
 }
 
-.searchbox, .searchbutton{
-  margin-top: 23px;
-  border-radius: 60px;
+.searchbutton {
+    text-shadow: 0 1px 0 #FFF;
+    border-color: #CCC #CCC #AAA;
+    box-shadow: 0 0 1px #FFF inset;
+    background: #E0E0E0 linear-gradient(to bottom, #FAFAFA 0px, #DCDCDC 100%);
 }
 
-.adjust{
-  margin: 6px 0;
+.searchbox, .searchbutton {
+    margin-top: 23px;
+    border-radius: 60px;
+}
+
+.adjust {
+    margin: 6px 0;
 }
