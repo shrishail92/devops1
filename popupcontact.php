@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Popup contact form</title>
-    <link href="css/popup.css" rel="stylesheet">
+    <link href="css/popupcontact.css" rel="stylesheet">
     <script src="js/popup.js"></script>
 </head>
 <!-- Body Starts Here -->
@@ -12,7 +12,8 @@
     <div id="popupContact">
         <!-- Contact Us Form -->
         <form action="#" id="form" method="post" name="form">
-            <img id="close" src="images/3.png" onclick ="div_hide()">
+            <img id="close" src="images/3.png" onclick="div_hide()">
+
             <h2>Contact Us</h2>
             <hr>
             <input id="name" name="name" placeholder="Name" type="text">

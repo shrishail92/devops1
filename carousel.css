@@ -72,6 +72,10 @@ body {
     z-index: 10;
 }
 
+.carousel-caption h1{
+    color: #fff;
+}
+
 /* Declare heights because of positioning of img element */
 .carousel .item {
     height: 500px;

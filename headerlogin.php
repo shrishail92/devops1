@@ -155,7 +155,7 @@
                         <a href="glossary_hemophilia.php" title="Meanings for words."> <i class="glyphicon glyphicon-list-alt"></i> Glossary</a>
                     </li>
                     <li>
-                        <a href="guides_hemophilia.php" title="Pdf documents."> <i class="glyphicon glyphicon-folder-open"></i> Guides / Manuals</a>
+                        <a href="guides_hemophilia.php" title="Pdf documents."> <i class="glyphicon glyphicon-book"></i> Guides / Manuals</a>
                     </li>
                 </ul>
                 <div class="uparrow"></div>
@@ -176,7 +176,7 @@
             </li>
 
             <li>
-                <a href="#">About us</a>
+                <a href="#"> <i class="glyphicon glyphicon-bell"></i> Notifications</a>
             </li>
 
             <li>

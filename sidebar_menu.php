@@ -6,8 +6,8 @@
     </title>
 </head>
 <body>
-    <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
-      <div class="list-group">
+<div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
+    <div class="list-group">
         <span class="list-group-item list-group-item-heading">Quick Navigation Links</span>
         <a href="guides_hemophilia.php" class="list-group-item">Guides / Manuals</a>
         <a href="about_hemophilia.php" class="list-group-item">About Hemophilia</a>
@@ -16,7 +16,7 @@
         <a href="videos_hemophilia.php" class="list-group-item">Videos - Hemophilia</a>
         <a href="glossary_hemophilia.php" class="list-group-item">Glossary for this site</a>
         <a href="history_hemophilia.php" class="list-group-item">History of Hemophilia</a>
-      </div>
     </div>
+</div>
 </body>
 </html>

@@ -67,7 +67,7 @@ if (isset($_SESSION['user'])) {
 
             <div class="row featurette">
                 <div class="col-md-7">
-                    <h2>Causes of hemophilia</h2>
+                    <h2>Causes <span class="text-muted">of hemophilia</span></h2>
 
                     <p class="text-justify">
                         <span class="para">
@@ -108,7 +108,7 @@ if (isset($_SESSION['user'])) {
 
             <div class="row">
                 <div class="col-xs-6 col-lg-12">
-                    <h2>Types</h2>
+                    <h2>Types <span class="text-muted">of hemophilia</span></h2>
 
                     <div class="text-justify">
                         There are several different types of hemophilia. The following two are the most common:
